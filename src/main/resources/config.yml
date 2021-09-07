@@ -1,0 +1,16 @@
+# SimpleEconomy Configuration.
+
+# The monetary unit to be used
+monetary-unit: $
+
+# The balance which every player starts off with
+starting-balance: 10
+
+# Database details
+database:
+  mysql:
+    host: localhost
+    port: 3306
+    user: root
+    password: test
+    database: simpleeconomy

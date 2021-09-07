@@ -1,0 +1,31 @@
+name: ${project.name}
+version: ${project.version}
+main: com.projecki.economy.SimpleEconomyPlugin
+authors:
+  - Projecki LLC
+  - lukeeey
+website: https://projecki.com
+description: A simple economy plugin
+commands:
+  balance:
+    description: View your balance
+    usage: /balance [player]
+    aliases:
+      - bal
+      - money
+    permission: simpleeconomy.command.balance
+  setbalance:
+    description: Set a player's balance
+    usage: /setbalance <player> <new balance>
+    permission: simpleeconomy.command.setbalance
+permissions:
+  simpleeconomy.*:
+    default: false
+    children:
+      simpleeconomy.command.*:
+        default: false
+        children:
+          simpleconomy.command.balance:
+            default: true
+          simpleeconomy.command.setbalance:
+            default: op
