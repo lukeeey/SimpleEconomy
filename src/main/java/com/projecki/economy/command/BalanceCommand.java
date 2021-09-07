@@ -24,6 +24,10 @@ public class BalanceCommand implements CommandExecutor {
             }
             target = (Player) sender;
         } else {
+            if (!sender.hasPermission("simpleeconomy.command.balance.other")) {
+                sender.sendMessage(ChatColor.RED + "You don't have permission to view the balance of other players!");
+                return true;
+            }
             target = Bukkit.getPlayer(args[0]);
             if (target == null) {
                 sender.sendMessage(ChatColor.RED + "Player not found");

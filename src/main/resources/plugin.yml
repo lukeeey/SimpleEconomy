@@ -27,5 +27,7 @@ permissions:
         children:
           simpleconomy.command.balance:
             default: true
+          simpleeconomy.command.balance.other:
+            default: true
           simpleeconomy.command.setbalance:
             default: op
